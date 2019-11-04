@@ -40,7 +40,6 @@ namespace gestion_projet_agiles.ClassMetiers
 
         #endregion
 
-
         #region Méthodes
 
 

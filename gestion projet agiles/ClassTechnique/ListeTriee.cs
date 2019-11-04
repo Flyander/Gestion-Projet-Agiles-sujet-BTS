@@ -9,8 +9,6 @@ namespace gestion_projet_agiles.ClassTechnique
 {
     static class ListeTriee
     {
-
-        
         #region methode
         public static void ajoutePremier(Object o)
         {
