@@ -89,5 +89,14 @@ namespace gestion_projet_agiles.ClassMetiers
         }
 
         #endregion
+
+        #region methode
+        
+        public float pourcentageAvancement()
+        {
+            float Pourcentage = (collObjetTache.Count / donneNBTacheTerminees() * 100);
+            return Pourcentage;
+        }
+        #endregion
     }
 }

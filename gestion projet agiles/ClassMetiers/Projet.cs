@@ -54,9 +54,16 @@ namespace gestion_projet_agiles.ClassMetiers
 
         #region methodes
 
-        public int pourcentageAvancement()
+        public float pourcentageAvancement()
         {
-            return 0;
+            int TachesRestantARealiser = lesTachesRestantARealiser.Count;
+            int Tache = 0;
+            foreach (Lot l in Projet.collClassProjet)
+            {
+                Tache = Tache + l.CollObjetTache.Count;
+            }
+            float Pourcentage = ((TachesRestantARealiser / Tache) * 100);
+            return Pourcentage;
         }
         #endregion
     }
