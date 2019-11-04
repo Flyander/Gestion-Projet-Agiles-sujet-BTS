@@ -9,7 +9,11 @@ namespace gestion_projet_agiles.ClassTechnique
 {
     static class ListeTriee
     {
-        #region methode
+        #region Attributs
+        public static ArrayList CollClassListeTriee = new ArrayList();
+        #endregion
+
+        #region methode technique
         public static void ajoutePremier(Object o)
         {
 
