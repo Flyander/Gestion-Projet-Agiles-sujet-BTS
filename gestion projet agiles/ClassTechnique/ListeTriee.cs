@@ -20,15 +20,15 @@ namespace gestion_projet_agiles.ClassTechnique
         }
         public static void ajouteDernier(Object o)
         {
-
+            CollClassListeTriee.Add(o);
         }
         public static ArrayList retournePremier()
         {
             return ;
         }
-        public static ArrayList retourneDernier()
+        public static object retourneDernier()
         {
-            return ;
+            return CollClassListeTriee[NbElements() - 1];
         }
         public static void suprimePremier()
         {
@@ -37,6 +37,7 @@ namespace gestion_projet_agiles.ClassTechnique
         public static void suprimeDernier()
         {
 
+            CollClassListeTriee.RemoveAt(NbElements() - 1);
         }
         public static int NbElements()
         {
