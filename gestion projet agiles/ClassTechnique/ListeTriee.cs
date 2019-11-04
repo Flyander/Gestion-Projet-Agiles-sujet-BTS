@@ -16,15 +16,15 @@ namespace gestion_projet_agiles.ClassTechnique
         #region methode technique
         public static void ajoutePremier(Object o)
         {
-
+            CollClassListeTriee.Insert(0, o);
         }
         public static void ajouteDernier(Object o)
         {
 
         }
-        public static ArrayList retournePremier()
+        public static object retournePremier()
         {
-            return ;
+            return CollClassListeTriee[0];
         }
         public static ArrayList retourneDernier()
         {
@@ -32,7 +32,7 @@ namespace gestion_projet_agiles.ClassTechnique
         }
         public static void suprimePremier()
         {
-            
+            CollClassListeTriee.RemoveAt(0);
         }
         public static void suprimeDernier()
         {
@@ -40,7 +40,7 @@ namespace gestion_projet_agiles.ClassTechnique
         }
         public static int NbElements()
         {
-            return 1;
+            return CollClassListeTriee.Count;
         }
 
         #endregion
