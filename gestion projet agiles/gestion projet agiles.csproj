@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClassMetiers\Collaborateur.cs" />
+    <Compile Include="ClassMetiers\Lot.cs" />
     <Compile Include="ClassMetiers\Projet.cs" />
     <Compile Include="ClassMetiers\Tache.cs" />
     <Compile Include="ClassMetiers\Service.cs" />
