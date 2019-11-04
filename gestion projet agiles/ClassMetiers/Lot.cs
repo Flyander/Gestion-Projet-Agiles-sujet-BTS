@@ -1,4 +1,5 @@
-﻿using System;
+﻿using gestion_projet_agiles.ClassTechnique;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -42,6 +43,51 @@ namespace gestion_projet_agiles.ClassMetiers
         public string Etat { get => _etat; set => _etat = value; }
         public ArrayList CollObjetTache { get => collObjetTache; set => collObjetTache = value; }
         public Projet LeProjet { get => _leProjet; set => _leProjet = value; }
+        #endregion
+
+        #region Methodes
+
+        public void ajouterTaches(int param)
+        {
+            int cpt = 0;
+            foreach (object unObjet in ListeTriee.CollClassListeTriee)
+            {
+                if (unObjet is Tache)
+                {
+                    Tache maTache = (Tache)unObjet;
+                    if (maTache.Etat == "en attente de lot")
+                    {
+                        maTache.Etat = "à affecter";
+                        this.collObjetTache.Add(maTache);
+                        ListeTriee.suprimePremier();
+                        cpt++;
+                    }
+                }
+                if (cpt == param)
+                {
+                    break;
+                }
+            }
+        }
+
+        public int donneNbTachesTerminees()
+        {
+            int cpt = 0;
+            foreach(Tache uneTache in this.collObjetTache)
+            {
+                if (uneTache.Etat == "terminée")
+                {
+                    cpt++;
+                }
+            }
+            return cpt;
+        }
+
+        public ArrayList donneTacheAAffecter()
+        {
+            return collObjetTache;
+        }
+
         #endregion
     }
 }
