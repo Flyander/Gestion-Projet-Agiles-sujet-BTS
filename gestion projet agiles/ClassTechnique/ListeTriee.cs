@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,40 @@ using System.Threading.Tasks;
 
 namespace gestion_projet_agiles.ClassTechnique
 {
-    class ListeTriee
+    static class ListeTriee
     {
+
+        
+        #region methode
+        public static void ajoutePremier(Object o)
+        {
+
+        }
+        public static void ajouteDernier(Object o)
+        {
+
+        }
+        public static ArrayList retournePremier()
+        {
+            return ;
+        }
+        public static ArrayList retourneDernier()
+        {
+            return ;
+        }
+        public static void suprimePremier()
+        {
+            
+        }
+        public static void suprimeDernier()
+        {
+
+        }
+        public static int NbElements()
+        {
+            return 1;
+        }
+
+        #endregion
     }
 }
