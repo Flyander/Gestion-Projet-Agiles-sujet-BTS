@@ -9,6 +9,7 @@ namespace gestion_projet_agiles.ClassMetiers
 {
     class Tache
     {
+        #region Attributs
         public static ArrayList CollClassTache = new ArrayList();
 
         private int _idTache;
@@ -19,7 +20,9 @@ namespace gestion_projet_agiles.ClassMetiers
         private float _dureeReelle;
         private string _etat;
         private List<Collaborateur> collObjetTache;
+        #endregion
 
+        #region Constructeurs
         public Tache(int idTache, string intituleTache, DateTime dateDebutPrevue, DateTime dateDebutReelle, float dureePrevue, float dureeReelle, string etat)
         {
             _idTache = idTache;
@@ -33,7 +36,9 @@ namespace gestion_projet_agiles.ClassMetiers
             CollObjetTache = new List<Collaborateur>();
             Tache.CollClassTache.Add(this);
         }
+        #endregion
 
+        #region Getters/Setters
         public int IdTache { get => _idTache; set => _idTache = value; }
         public string IntituleTache { get => _intituleTache; set => _intituleTache = value; }
         public DateTime DateDebutPrevue { get => _dateDebutPrevue; set => _dateDebutPrevue = value; }
@@ -42,5 +47,6 @@ namespace gestion_projet_agiles.ClassMetiers
         public float DureeReelle { get => _dureeReelle; set => _dureeReelle = value; }
         public string Etat { get => _etat; set => _etat = value; }
         public List<Collaborateur> CollObjetTache { get => collObjetTache; set => collObjetTache = value; }
+        #endregion
     }
 }
