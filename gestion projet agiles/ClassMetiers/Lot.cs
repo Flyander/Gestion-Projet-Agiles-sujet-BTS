@@ -43,5 +43,14 @@ namespace gestion_projet_agiles.ClassMetiers
         public ArrayList CollObjetTache { get => collObjetTache; set => collObjetTache = value; }
         public Projet LeProjet { get => _leProjet; set => _leProjet = value; }
         #endregion
+
+        #region methode
+        
+        public float pourcentageAvancement()
+        {
+            float Pourcentage = (collObjetTache.Count / donneNBTacheTerminees() * 100);
+            return Pourcentage;
+        }
+        #endregion
     }
 }
